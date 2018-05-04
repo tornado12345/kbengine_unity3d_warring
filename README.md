@@ -1,25 +1,26 @@
 kbengine_unity3d_warring
 =============
 
-##本项目作为KBEngine服务端引擎的客户端演示而写，适用于Unity4.x
+## 本项目作为KBEngine服务端引擎的客户端演示而写，适用于Unity4.x
+
 http://www.kbengine.org
 
-##官方论坛
+## 官方论坛
 
 	http://bbs.kbengine.org
 
 
-##QQ交流群
+## QQ交流群
 
 	461368412
 
 
-##KBE插件文档
+## KBE插件文档
 
-	https://github.com/kbengine/kbengine_unity3d_plugins/blob/master/README.md
+	Assets\Plugins\kbengine\kbengine_unity3d_plugins\README.md
 
 
-##GO!
+## GO!
 
 	1. 确保已经下载过KBEngine服务端引擎，如果没有下载请先下载
 		下载服务端源码(KBEngine)：
@@ -31,7 +32,7 @@ http://www.kbengine.org
 		安装(KBEngine)：
 			http://www.kbengine.org/docs/installation.html
 
-	2. 下载KBEngine客户端插件与服务端Demo资产库:
+	2. 下载KBEngine服务端Demo资产库:
 
 		* 使用git命令行，进入到kbengine_unity3d_warring目录执行：
 
@@ -41,11 +42,7 @@ http://www.kbengine.org
 		* 或者使用 TortoiseGit(选择菜单): TortoiseGit -> Submodule Update:
 ![submodule_update2](http://www.kbengine.org/assets/img/screenshots/unity3d_plugins_submodule_update.jpg)
 
-                * 也可以手动下载kbengine客户端插件与服务端Demo资产库
-
-		        客户端插件下载：
-		            https://github.com/kbengine/kbengine_unity3d_plugins/releases/latest
-		            下载后请将其解压缩，插件源码请放置在: Assets/plugins/kbengine/kbengine_unity3d_plugins
+                * 也可以手动下载kbengine服务端Demo资产库
 
 		        服务端资产库下载：
 		            https://github.com/kbengine/kbengine_demos_assets/releases/latest
@@ -54,8 +51,12 @@ http://www.kbengine.org
 	3. 拷贝服务端资产库"kbengine_demos_assets"到服务端引擎根目录"kbengine/"之下，如下图：
 ![demo_configure](http://www.kbengine.org/assets/img/screenshots/demo_copy_kbengine.jpg)
 
+	4. 通过服务端资产库生成KBE客户端插件（可选，默认已经带有一份，除非服务器有相关改动才需要再次生成）
+		1: 双击运行 kbengine/kbengine_demos_asset/gensdk.bat
+		2: 拷贝kbengine_unity3d_plugins到kbengine_unity3d_warring\Assets\Plugins\kbengine\
 
-##配置Demo(可选):
+
+## 配置Demo(可选):
 
 	创建AssetBundles(默认已经创建，可以跳过这一步)：
 		unity3d(菜单上)->Publish->Build Publish AssetBundles(打包所有需要动态加载资源)
@@ -77,7 +78,7 @@ http://www.kbengine.org
 		kbengine_unity3d_warring\Scripts\kbe_scripts\clientapp.cs -> ip
 		kbengine_unity3d_warring\Scripts\kbe_scripts\clientapp.cs -> port
 
-##启动服务器:
+## 启动服务器:
 
 	先开启服务端
 		Windows:
@@ -91,13 +92,13 @@ http://www.kbengine.org
 		任何其他情况请在日志中搜索"ERROR"关键字，根据错误描述尝试解决。
 		(More: http://www.kbengine.org/cn/docs/startup_shutdown.html)
 
-##导出WebPlayer项目:
+## 导出WebPlayer项目:
 
 	Unity3d File->Build Settings->Scenes In Build选择scenes/start.unity->Platform
 	选择Web Player->Build。 
 
 
-##在Unity3D编辑器运行游戏
+## 在Unity3D编辑器运行游戏
 	
 	Unity3D中选择Assets\scenes\start场景然后点击编辑器运行按钮，如果无意外应该可以登录游戏进入到场景中了。
 	(注意：运行游戏前请确保Unity3D控制台“错误暂停”是取消状态，因为一些原因一定会遇到错误，参考：http://bbs.kbengine.org/forum.php?mod=viewthread&tid=20&extra=page%3D1)
@@ -105,7 +106,7 @@ http://www.kbengine.org
 ![unity_error_pause](http://www.kbengine.org/assets/img/screenshots/unity_error_pause.png)
 
 
-##在浏览器运行游戏:
+## 在浏览器运行游戏:
 
 	Web服务器部署文件夹结构:
 
@@ -126,12 +127,13 @@ http://www.kbengine.org
 	https://sourceforge.net/projects/kbengine/files/
 
 
-##WebPlayer日志:
+## WebPlayer日志:
 
 	Windows XP: C:\Documents and Settings\username\Local  Settings\Temp\UnityWebPlayer\log
 	Windows Vista/7: C:\Users\username\AppData\Local\Temp\UnityWebPlayer\log
 
-##warring截图
+## warring截图
+
 ![warring项目运行效果](http://www.kbengine.org/assets/img/screenshots/unity3d_demo1.jpg)
 ![warring项目运行效果](http://www.kbengine.org/assets/img/screenshots/unity3d_demo2.jpg)
 ![warring项目运行效果](http://www.kbengine.org/assets/img/screenshots/unity3d_demo3.jpg)
